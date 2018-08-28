@@ -1,3 +1,298 @@
+.choose-block {
+    width: 100%;
+    max-width: 140px;
+    padding: 0 10px;
+
+    -webkit-border-radius: 50%;
+
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.choose-block h3 {
+    font-size: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    margin-top: 20px;
+
+}
+
+.choose-block h3:hover {
+    text-decoration: none;
+    color: #000;
+    outline: none;
+}
+
+.choose-block img {
+
+    max-width: 110px;
+}
+
+.products-main-circle {
+    margin-top: 100px;
+}
+
+.products-main-circle ul {
+    position: relative;
+    height: 550px;
+    width: 550px;
+    padding-left: 0;
+    display: block;
+    border: 5px solid dodgerblue;
+    border-radius: 50%;
+}
+
+.production-main-circle > ul:before {
+    content: "";
+    width: 550px;
+    height: 550px;
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    border: 5px solid blue;
+}
+
+.production-main-circle > ul:after {
+    content: "";
+    width: 550px;
+    display: block;
+    height: 550px;
+    position: relative;
+    border-radius: 50%;
+    border: 5px solid blue;
+}
+
+.products-main-circle > ul > li {
+    background-color: aliceblue;
+    border-radius: 50%;
+    width: 110px;
+    position: absolute;
+    top: 50px;
+    box-shadow: 0 0 10px #333;
+    height: 110px;
+}
+
+.products-main-circle > ul > li:first-child {
+    background-color: aliceblue;
+    border-radius: 50%;
+    width: 110px;
+    position: absolute;
+    top: -9%;
+    list-style: none;
+    left: 50%;
+    height: 110px;
+    transform: translate(-50%, 0%);
+}
+
+.products-main-circle > ul > li:nth-child(3) {
+    right: 0;
+}
+
+.products-main-circle > ul > li:nth-child(4) {
+    margin-top: 200px;
+    left: -50px;
+}
+
+.products-main-circle > ul > li:nth-child(5) {
+    right: -50px;
+    margin-top: 200px;
+}
+
+.products-main-circle > ul > li:nth-child(6) {
+
+        top: auto;
+    bottom: -9%;
+    list-style: none;
+    left: 50%;
+
+    transform: translate(-50%, 0%);
+}
+
+.products-main-circle > ul > li > a {
+
+}
+
+.container-proj {
+    width: 500px;
+    height: 500px;
+    border: 9px solid #88b5e1;
+    border-radius: 50%;
+    display: flex;
+    position: relative;
+    transform: scale(0.9);
+    justify-content: center;
+    align-items: center;
+}
+.container-proj:before {
+    content: "";
+    width: 500px;
+    height: 500px;
+    border: 9px solid #7a9bd1;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 5px);
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.container-proj.double-circle {
+    width: 800px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-proj.double-circle:before {
+    display: block;
+}
+
+.mt-130 {
+    margin-top: 130px;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.field {
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    box-shadow: 0 0 10px #ccc;
+
+}
+
+.centered-title-proj {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.field:hover span {
+    transition: all .2s ease-in-out;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.field:hover {
+    transition: all .2s ease-in-out;
+
+    color: #fff;
+    background: #67cce6;
+    background: -moz-linear-gradient(top, hsla(192,72%,65%,1) 0%, hsla(194,85%,64%,1) 40%, hsla(212,54%,67%,1) 100%);
+    background: -webkit-linear-gradient(top, hsla(192,72%,65%,1) 0%,hsla(194,85%,64%,1) 40%,hsla(212,54%,67%,1) 100%);
+    background: linear-gradient(to bottom, hsla(192,72%,65%,1) 0%,hsla(194,85%,64%,1) 40%,hsla(212,54%,67%,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67cce6', endColorstr='#7ca7d8',GradientType=0 );
+}
+
+.field:focus {
+    transition: all .2s ease-in-out;
+    color: #fff;
+    background: #85a0c4;
+    background: -moz-linear-gradient(top, hsla(214,35%,65%,1) 0%, hsla(214,45%,58%,1) 44%, hsla(216,43%,46%,1) 100%);
+    background: -webkit-linear-gradient(top, hsla(214,35%,65%,1) 0%,hsla(214,45%,58%,1) 44%,hsla(216,43%,46%,1) 100%);
+    background: linear-gradient(to bottom, hsla(214,35%,65%,1) 0%,hsla(214,45%,58%,1) 44%,hsla(216,43%,46%,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#85a0c4', endColorstr='#436ca9',GradientType=0 );
+}
+
+.field:focus span{
+    transition: all .2s ease-in-out;
+    border: 2px solid #fff;
+    color: #fff;
+
+}
+
+.field span {
+    border-radius: 50%;
+    border: 2px solid #5580bd;
+    width: 100%;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 16px;
+    color: #000;
+}
+
+.modal-menu-container {
+    display: none;
+}
+
+.toggle-content {
+    border-left: 2px solid #385C8D;
+    padding-left: 15px;
+}
+
+.modal-menu-container h2 {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #385C8D;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.modal-menu-container p {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.modal-menu-container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.modal-menu-container ul li {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.mw-300 {
+    width: 100%;
+    max-width: 300px;
+}
+
+
+.hover-img {
+    display: none;
+}
+
+.choose-block:hover > .static-img {
+    display: none;
+}
+
+.choose-block:hover .hover-img {
+    display: block;
+}
+
+.choose-block.active .hover-img {
+    display: block !important;
+}
+.choose-block.active .static-img {
+    display: none !important;
+}
+
+
+/*----------------------------------------- menu circular ---------------------------------------------------*/
+
 .circular-menu {
     display: block;
     position: relative;
@@ -127,14 +422,19 @@
     font-family: 'Nunito Sans', sans-serif;
 }
 
-/*.page-current {*/
-    /*visibility: visible;*/
-    /*opacity: 1;*/
-    /*display: block;*/
-    /*transition: all .2s ease-in-out;*/
-/*}*/
 
 .mw-300 {
     width: 100%;
     max-width: 300px;
+}
+
+
+.progress {
+    display: -ms-flexbox;
+    display: block;
+    height: auto;
+    overflow: hidden;
+    font-size: initial;
+    background-color: transparent;
+    border-radius: 0;
 }
