@@ -8,7 +8,6 @@
     -moz-border-radius: 50%;
     border-radius: 50%;
 }
-
 a:hover {
     text-decoration: none;
 }
@@ -20,7 +19,6 @@ a:hover {
     color: #000;
     text-decoration: none;
     margin-top: 20px;
-
 }
 
 .choose-block h3:hover {
@@ -30,7 +28,6 @@ a:hover {
 }
 
 .choose-block img {
-
     max-width: 110px;
 }
 
