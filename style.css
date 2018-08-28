@@ -8,6 +8,7 @@
     -moz-border-radius: 50%;
     border-radius: 50%;
 }
+
 a:hover {
     text-decoration: none;
 }
@@ -19,6 +20,7 @@ a:hover {
     color: #000;
     text-decoration: none;
     margin-top: 20px;
+
 }
 
 .choose-block h3:hover {
@@ -28,6 +30,7 @@ a:hover {
 }
 
 .choose-block img {
+
     max-width: 110px;
 }
 
@@ -116,8 +119,8 @@ a:hover {
 }
 
 .container-proj {
-    width: 500px;
-    height: 500px;
+    width: 300px;
+    height: 300px;
     border: 9px solid #88b5e1;
     border-radius: 50%;
     display: flex;
@@ -128,8 +131,8 @@ a:hover {
 }
 .container-proj:before {
     content: "";
-    width: 500px;
-    height: 500px;
+    width: 300px;
+    height: 300px;
     border: 9px solid #7a9bd1;
     border-radius: 50%;
 
@@ -140,8 +143,8 @@ a:hover {
     display: none;
 }
 .container-proj.double-circle {
-    width: 800px;
-    height: 800px;
+    width: 600px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,9 +178,25 @@ a:hover {
     box-shadow: 0 0 10px #ccc;
 
 }
+.title-default {
+    font-size: 60px;
+    font-family: 'Nunito Sans', sans-serif;
+    text-align: center;
+    color: #436ca9;
+    text-transform: uppercase;
+    position: relative;
+    margin: auto;
+    margin-bottom: 50px;
+    display: table;
+    border-bottom: 2px solid #436ca9;
+}
+
+.tab-content {
+    margin-top: 100px;
+}
 
 .centered-title-proj {
-    font-size: 40px;
+    font-size: 23px;
     text-transform: uppercase;
 }
 
@@ -262,9 +281,9 @@ a:hover {
     font-family: 'Nunito Sans', sans-serif;
 }
 
-.mw-300 {
+.mw-200 {
     width: 100%;
-    max-width: 300px;
+    max-width: 200px;
 }
 
 
@@ -296,11 +315,13 @@ a:hover {
     margin: 30px auto;
     list-style: none;
     padding: 0;
+    transform: scale(.9);
 }
 
 .circular-menu-container {
     align-items: center;
     display: flex;
+    height: 100vh;
     padding: 0 15px;
 }
 .circular-menu li {
@@ -420,9 +441,9 @@ a:hover {
 }
 
 
-.mw-300 {
+.mw-200 {
     width: 100%;
-    max-width: 300px;
+    max-width: 200px;
 }
 
 
@@ -434,4 +455,81 @@ a:hover {
     font-size: initial;
     background-color: transparent;
     border-radius: 0;
+}
+
+.info-circular {
+    position: absolute;
+    top: 6%;
+    right: 0;
+}
+
+@media screen and (min-width: 960px) and (min-height: 540px) {
+    .circular-menu {
+        margin-top: 5%;
+        transform: scale(.6);
+    }
+
+    .info-circular {
+        position: absolute;
+        top: 20%;
+        right: -15%;
+    }
+
+    .modal-menu-container h2 {
+        font-size: 25px;
+    }
+
+    .modal-menu-container p, .modal-menu-container ul li {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (min-height: 600px) {
+    .info-circular {
+        position: absolute;
+        top: 5%;
+        right: 0%;
+    }
+
+
+}
+
+@media screen and (min-width: 1080px) and (min-height: 1920px) {
+    .circular-menu {
+        margin-top: 5%;
+        transform: scale(.9);
+    }
+
+    .info-circular {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+
+}
+
+@media screen and (min-width: 1200px) and (min-height: 1920px) {
+    .circular-menu {
+        margin-top: 5%;
+        transform: scale(1.1);
+    }
+
+    .info-circular {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+@media screen and (min-width: 1280px) and (min-height: 720px) {
+
+    .circular-menu {
+        margin-top: 5%;
+        transform: scale(.8);
+    }
+}
+
+.circular-projects {
+
 }

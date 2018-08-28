@@ -1,4 +1,6 @@
 $( document ).ready(function() {
+
+
     //MENU CIRCULAR
 
     $.fn.rotationDegrees = function () {
@@ -94,7 +96,7 @@ $( document ).ready(function() {
     });
 
     function showCircles(currentProj) {
-        var radius = 250;
+        var radius = 150;
         var fields = $(currentProj + ' .field'),
             width = $(currentProj).width(),
             height = $(currentProj).height();
@@ -102,13 +104,13 @@ $( document ).ready(function() {
             step = (2*Math.PI) / 6;
 
         if(fields.length > 6) {
-            width = 800;
-            height = 800;
+            width = 600;
+            height = 600;
         }
 
         fields.each(function(index) {
             if(index > 5) {
-                radius = 400;
+                radius = 300;
                 $(currentProj).addClass("double-circle");
             } else if(index > 11) {
                 $(this).remove();
@@ -135,7 +137,71 @@ $( document ).ready(function() {
         return false;
     });
 
+
+    // console.log(($(window).height()) / ($(".circular-menu").height() + 200) );
+
+
+    calculateNewScale();
+    $(window).resize(function ()
+    {
+        calculateNewScale();
+    });
+
+    function calculateNewScale()
+    {
+        var percentageOn1 = ($(window).height()) / ($(".circular-menu").height()+ 200) ;
+    $(".circular-menu").css(
+        {
+            "-moz-transform": "scale("+percentageOn1 +")",
+            "-webkit-transform": "scale("+percentageOn1 +")",
+            "transform": "scale("+percentageOn1 +")"
+        });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    $( ".nav-tabs li a" ).on("click", function(){
+        $(".circular-projects").css({
+            "height":"100vh"
+        });
+    });
+
+
+
+
+
+
+
+
+
 });
 
-
+// $(document).ready(function(){
+// // Handling data-toggle manually
+//     $('.nav-tabs a').click(function(){
+//         $(this).tab('show');
+//     });
+//
+//     $('.nav-tabs a').on('shown.bs.tab', function (e) {
+//
+//         var current_tab = e.target;
+//         var previous_tab = e.relatedTarget;
+//         console.log ( $(current_tab).attr('href') );
+//
+//
+//
+//     });
+// });
 
