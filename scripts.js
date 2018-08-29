@@ -96,7 +96,7 @@ $( document ).ready(function() {
     });
 
     function showCircles(currentProj) {
-        var radius = ($(window).height() > 960) ? 125 : 75;
+        var radius = ($(window).height() > 960) ? 150 : 75;
         var fields = $(currentProj + ' .field'),
             width = $(currentProj).width(),
             height = $(currentProj).height();

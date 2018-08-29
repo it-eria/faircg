@@ -119,8 +119,8 @@ a:hover {
 }
 
 .container-proj {
-    width: 270px;
-    height: 270px;
+    width: 300px;
+    height: 300px;
     border: 9px solid #5c5959;
     border-radius: 50%;
     display: flex;
@@ -131,8 +131,8 @@ a:hover {
 }
 .container-proj:before {
     content: "";
-    width: 270px;
-    height: 270px;
+    width: 300px;
+    height: 300px;
     border: 9px solid #7c797a;
     border-radius: 50%;
 
@@ -284,23 +284,43 @@ a:hover {
 }
 
 
-.hover-img {
+.hover-img, .focus-img {
     display: none;
 }
 
-.choose-block:hover > .static-img {
+.focus-img:hover .focus-img {
     display: none;
+}
+
+.choose-block:hover > .static-img, .focus-img {
+    display: none;
+}
+
+.choose-block:focus > .static-img, .hover-img {
+    display: none;
+}
+
+.choose-block:focus > .focus-img {
+    display: block;
 }
 
 .choose-block:hover .hover-img {
     display: block;
 }
 
-.choose-block.active .hover-img {
+.choose-block:hover .focus-img {
+    display: none;
+}
+
+.choose-block.active .focus-img {
     display: block !important;
 }
 .choose-block.active .static-img {
     display: none !important;
+}
+
+.choose-block.active:hover .hover-img {
+    display: none;
 }
 
 
@@ -318,8 +338,9 @@ a:hover {
 
 .circular-menu-container {
     align-items: center;
-    display: flex;
+    /*display: flex;*/
     height: 100vh;
+    flex-direction: column;
     flex-wrap: wrap;
     padding: 0 15px;
 }
