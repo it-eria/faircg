@@ -22,7 +22,7 @@ $( document ).ready(function() {
     var heightOfLine = 30;
     var menuSize = $('.circular-menu li').length * heightOfLine * 4 + sizeOfFirst;
     var zIndex = 1;
-    var color1 = '3d649a';
+    var color1 = 'B3B1B3';
     var colorDiff = 329741;
     var startRadius = 9 * $('.circular-menu li').length;
     var step = startRadius / $('.circular-menu li').length - 1;
@@ -69,7 +69,7 @@ $( document ).ready(function() {
     $('.circular-menu li').css({
         'transition': 'all .3s ease-in-out'
     });
-
+    $('.circular-menu li').removeClass('focus');
     $('.circular-menu li').on('click', function(){
         $('.circular-menu li').removeClass('focus');
         $(this).addClass('focus');
@@ -82,7 +82,7 @@ $( document ).ready(function() {
 
         var target = $(this).attr("href");
         $('.page-current').add(target).fadeIn(700);
-        return false;
+
     });
 
 
@@ -96,7 +96,7 @@ $( document ).ready(function() {
     });
 
     function showCircles(currentProj) {
-        var radius = 150;
+        var radius = ($(window).height() > 960) ? 125 : 75;
         var fields = $(currentProj + ' .field'),
             width = $(currentProj).width(),
             height = $(currentProj).height();
@@ -104,13 +104,13 @@ $( document ).ready(function() {
             step = (2*Math.PI) / 6;
 
         if(fields.length > 6) {
-            width = 600;
-            height = 600;
+            width = ($(window).height() > 960) ? 600 : 350;
+            height = ($(window).height() > 960) ? 600 : 350;
         }
 
         fields.each(function(index) {
             if(index > 5) {
-                radius = 300;
+                radius = ($(window).height() > 960) ? 300 : 175;
                 $(currentProj).addClass("double-circle");
             } else if(index > 11) {
                 $(this).remove();
@@ -118,8 +118,8 @@ $( document ).ready(function() {
             var x = Math.round(width/2 + radius * Math.cos(angle) - $(this).width()/2);
             var y = Math.round(height/2 + radius * Math.sin(angle) - $(this).height()/2);
             $(this).css({
-                left: x + 'px',
-                top: y + 'px'
+                left: ($(window).height() > 960) ? 'calc('+ (x - 10) +'px)' : 'calc('+ (x - 10) +'px)',
+                top: ($(window).height() > 960) ? 'calc('+ (y - 10) +'px)' : 'calc('+ (y - 10) +'px)'
             });
             angle += step;
         });
@@ -147,16 +147,15 @@ $( document ).ready(function() {
         calculateNewScale();
     });
 
-    function calculateNewScale()
-    {
-        var percentageOn1 = ($(window).height()) / ($(".circular-menu").height()+ 200) ;
-    $(".circular-menu").css(
-        {
-            "-moz-transform": "scale("+percentageOn1 +")",
-            "-webkit-transform": "scale("+percentageOn1 +")",
-            "transform": "scale("+percentageOn1 +")"
-        });
-}
+    function calculateNewScale() {
+        var percentageOn1 = ($(".service-height").height()) / ($(".circular-menu").height() + 500);
+        $(".circular-menu").css(
+            {
+                "-moz-transform": "scale("+percentageOn1 +")",
+                "-webkit-transform": "scale("+percentageOn1 +")",
+                "transform": "scale("+percentageOn1 +")"
+            });
+        }
 
 
 

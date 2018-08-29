@@ -44,7 +44,7 @@ a:hover {
     width: 550px;
     padding-left: 0;
     display: block;
-    border: 5px solid dodgerblue;
+    border: 5px solid #3F3F3F;
     border-radius: 50%;
 }
 
@@ -55,7 +55,7 @@ a:hover {
     display: block;
     position: relative;
     border-radius: 50%;
-    border: 5px solid blue;
+    border: 5px solid #3F3F3F;
 }
 
 .production-main-circle > ul:after {
@@ -65,7 +65,7 @@ a:hover {
     height: 550px;
     position: relative;
     border-radius: 50%;
-    border: 5px solid blue;
+    border: 5px solid #3F3F3F;
 }
 
 .products-main-circle > ul > li {
@@ -119,9 +119,9 @@ a:hover {
 }
 
 .container-proj {
-    width: 300px;
-    height: 300px;
-    border: 9px solid #88b5e1;
+    width: 270px;
+    height: 270px;
+    border: 9px solid #5c5959;
     border-radius: 50%;
     display: flex;
     position: relative;
@@ -131,14 +131,14 @@ a:hover {
 }
 .container-proj:before {
     content: "";
-    width: 300px;
-    height: 300px;
-    border: 9px solid #7a9bd1;
+    width: 270px;
+    height: 270px;
+    border: 9px solid #7c797a;
     border-radius: 50%;
 
     position: absolute;
     top: 50%;
-    left: calc(50% + 5px);
+    left: calc(50%);
     transform: translate(-50%, -50%);
     display: none;
 }
@@ -149,6 +149,7 @@ a:hover {
     justify-content: center;
     align-items: center;
 }
+
 .container-proj.double-circle:before {
     display: block;
 }
@@ -178,21 +179,22 @@ a:hover {
     box-shadow: 0 0 10px #ccc;
 
 }
+
 .title-default {
     font-size: 60px;
     font-family: 'Nunito Sans', sans-serif;
     text-align: center;
-    color: #436ca9;
+    color: #3F3F3F;
     text-transform: uppercase;
     position: relative;
     margin: auto;
     margin-bottom: 50px;
     display: table;
-    border-bottom: 2px solid #436ca9;
+    border-bottom: 2px solid #3F3F3F;
 }
 
 .tab-content {
-    margin-top: 100px;
+    margin-top: 30px;
 }
 
 .centered-title-proj {
@@ -202,41 +204,36 @@ a:hover {
 
 .field:hover span {
     transition: all .2s ease-in-out;
-    border: 2px solid #fff;
-    color: #fff;
+    border: 2px solid #595859;
+    color: #595859;
 }
 
 .field:hover {
     transition: all .2s ease-in-out;
 
-    color: #fff;
-    background: #67cce6;
-    background: -moz-linear-gradient(top, hsla(192,72%,65%,1) 0%, hsla(194,85%,64%,1) 40%, hsla(212,54%,67%,1) 100%);
-    background: -webkit-linear-gradient(top, hsla(192,72%,65%,1) 0%,hsla(194,85%,64%,1) 40%,hsla(212,54%,67%,1) 100%);
-    background: linear-gradient(to bottom, hsla(192,72%,65%,1) 0%,hsla(194,85%,64%,1) 40%,hsla(212,54%,67%,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67cce6', endColorstr='#7ca7d8',GradientType=0 );
+    color: #595859;
 }
 
 .field:focus {
     transition: all .2s ease-in-out;
     color: #fff;
-    background: #85a0c4;
-    background: -moz-linear-gradient(top, hsla(214,35%,65%,1) 0%, hsla(214,45%,58%,1) 44%, hsla(216,43%,46%,1) 100%);
-    background: -webkit-linear-gradient(top, hsla(214,35%,65%,1) 0%,hsla(214,45%,58%,1) 44%,hsla(216,43%,46%,1) 100%);
-    background: linear-gradient(to bottom, hsla(214,35%,65%,1) 0%,hsla(214,45%,58%,1) 44%,hsla(216,43%,46%,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#85a0c4', endColorstr='#436ca9',GradientType=0 );
+    background: #a0a0aa;
+    background: -moz-linear-gradient(top, hsla(240,5%,65%,1) 0%, hsla(240,5%,65%,1) 21%, hsla(245,6%,38%,1) 100%);
+    background: -webkit-linear-gradient(top, hsla(240,5%,65%,1) 0%,hsla(240,5%,65%,1) 21%,hsla(245,6%,38%,1) 100%);
+    background: linear-gradient(to bottom, hsla(240,5%,65%,1) 0%,hsla(240,5%,65%,1) 21%,hsla(245,6%,38%,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0a0aa', endColorstr='#5b5a66',GradientType=0 );
 }
 
 .field:focus span{
     transition: all .2s ease-in-out;
-    border: 2px solid #fff;
+    border: 4px solid #fff;
     color: #fff;
 
 }
 
 .field span {
     border-radius: 50%;
-    border: 2px solid #5580bd;
+    border: 2px solid #a9a5a6;
     width: 100%;
     display: flex;
     height: 100%;
@@ -244,7 +241,7 @@ a:hover {
     text-align: center;
     align-items: center;
     font-size: 16px;
-    color: #000;
+    color: #a9a5a6;
 }
 
 .modal-menu-container {
@@ -252,7 +249,7 @@ a:hover {
 }
 
 .toggle-content {
-    border-left: 2px solid #385C8D;
+    border-left: 2px solid #3F3F3F;
     padding-left: 15px;
 }
 
@@ -260,7 +257,7 @@ a:hover {
     font-size: 30px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #385C8D;
+    color: #3F3F3F;
     font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -315,6 +312,7 @@ a:hover {
     margin: 30px auto;
     list-style: none;
     padding: 0;
+
     transform: scale(.9);
 }
 
@@ -322,6 +320,7 @@ a:hover {
     align-items: center;
     display: flex;
     height: 100vh;
+    flex-wrap: wrap;
     padding: 0 15px;
 }
 .circular-menu li {
@@ -387,7 +386,7 @@ a:hover {
     padding-left: 25px;
 }
 .circular-menu li h3 {
-    color: #385C8D;
+    color: #545354;
     display: block;
     margin: 0;
     padding: 0;
@@ -411,7 +410,7 @@ a:hover {
 }
 
 .toggle-content {
-    border-left: 2px solid #385C8D;
+    border-left: 2px solid #3F3F3F;
     padding-left: 15px;
 }
 
@@ -419,7 +418,7 @@ a:hover {
     font-size: 30px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #385C8D;
+    color: #3F3F3F;
     font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -465,14 +464,14 @@ a:hover {
 
 @media screen and (min-width: 960px) and (min-height: 540px) {
     .circular-menu {
-        margin-top: 5%;
+        margin-top: 0;
         transform: scale(.6);
     }
 
     .info-circular {
         position: absolute;
         top: 20%;
-        right: -15%;
+        right: 2%;
     }
 
     .modal-menu-container h2 {
@@ -496,7 +495,7 @@ a:hover {
 
 @media screen and (min-width: 1080px) and (min-height: 1920px) {
     .circular-menu {
-        margin-top: 5%;
+        margin-top: 0;
         transform: scale(.9);
     }
 
@@ -511,7 +510,7 @@ a:hover {
 
 @media screen and (min-width: 1200px) and (min-height: 1920px) {
     .circular-menu {
-        margin-top: 5%;
+        margin-top: 0;
         transform: scale(1.1);
     }
 
@@ -525,11 +524,70 @@ a:hover {
 @media screen and (min-width: 1280px) and (min-height: 720px) {
 
     .circular-menu {
-        margin-top: 5%;
+        margin-top: 0;
         transform: scale(.8);
     }
 }
 
+@media screen and (max-height: 960px) {
+    .title-default {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .choose-block,
+    .choose-block img {
+        max-width: 60px;
+        width: 100%;
+    }
+    .choose-block h3 {
+        font-size: 10px;
+        margin-top: 5px;
+    }
+    .container-proj,
+    .container-proj:before {
+        width: 150px;
+        height: 150px;
+    }
+    .container-proj.double-circle {
+        width: 350px;
+        height: 350px;
+    }
+    .field {
+        width: 70px;
+        height: 70px;
+    }
+    .field span {
+        font-size: 8px;
+    }
+    .tab-content {
+        margin-top: 5px;
+    }
+
+    .centered-title-proj {
+        font-size: 11px;
+    }
+
+
+}
+
 .circular-projects {
 
+}
+
+.title-h2-default {
+    margin: 20px auto;
+    border-top: 4px solid #545354;
+    border-bottom: 4px solid #545354;
+    padding: 0 25px 0 0;
+    text-transform: uppercase;
+    color: #545354;
+    position: relative;
+    font-size: 60px;
+    font-family: 'Nunito Sans', sans-serif;
+    display: table;
+    font-weight: 600;
+}
+
+.service-height {
+    height: 82%;
 }
