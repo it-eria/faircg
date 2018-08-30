@@ -1,6 +1,10 @@
 $( document ).ready(function() {
 
 
+
+
+
+
     //MENU CIRCULAR
 
     $.fn.rotationDegrees = function () {
@@ -27,7 +31,7 @@ $( document ).ready(function() {
     var colorDiff = parseInt(color2, 16) - parseInt(color1, 16);
     var startRadius = 9 * $('.circular-menu li').length;
     var step = startRadius / $('.circular-menu li').length - 1;
-    console.log(colorDiff);
+
     $('.circular-menu').css({
         "width": menuSize + 'px',
         "height": menuSize + 'px'
@@ -86,8 +90,6 @@ $( document ).ready(function() {
     });
 
 
-
-
     $('.choose-block').removeClass('active');
 
     $('.choose-block').on('click', function(){
@@ -106,6 +108,7 @@ $( document ).ready(function() {
         if(fields.length > 6) {
             width = ($(window).height() > 768) ? 600 : 350;
             height = ($(window).height() > 768) ? 600 : 350;
+
         }
 
         fields.each(function(index) {
@@ -160,7 +163,7 @@ $( document ).ready(function() {
     });
 
     function calculateNewScale() {
-        var percentageOn1 = ($(".service-height").height()) / ($(".circular-menu").height() + 50);
+        var percentageOn1 = ($(".service-height").height()) / ($(".circular-menu").height() + 200);
         $(".circular-menu").css(
             {
                 "-moz-transform": "scale("+percentageOn1 +")",
@@ -169,23 +172,6 @@ $( document ).ready(function() {
             });
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     $( ".nav-tabs li a" ).on("click", function(){
         $(".circular-projects").css({
             "height":"100vh"
@@ -193,11 +179,27 @@ $( document ).ready(function() {
     });
 
 
+    function recalcHeightOnMobile() {
+        $('.circular-menu-wrapper').css({
+            "height": 'auto'
+        });
+        if($(window).width() < 993) {
+            $('.circular-menu-wrapper').css({
+                "height": $('.circular-menu-wrapper').height() / 2 + 'px'
+            });
+        }
+    }
+
+    recalcHeightOnMobile();
+    $( window ).on('resize', function() {
+        recalcHeightOnMobile();
+    });
 
 
 
-
-
+// var heightCircleMenu = ($(".circular-menu-container").outerHeight()) - ($(".circular-menu").outerHeight() / 2) + 20;
+//
+//     console.log(heightCircleMenu);
 
 
 });
@@ -218,4 +220,9 @@ $( document ).ready(function() {
 //
 //     });
 // });
+
+
+
+
+
 
