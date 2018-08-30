@@ -1,8 +1,8 @@
 .choose-block {
     width: 100%;
-    max-width: 140px;
+    max-width: 125px;
     padding: 0 10px;
-
+    text-align: center;
     -webkit-border-radius: 50%;
 
     -moz-border-radius: 50%;
@@ -14,7 +14,7 @@ a:hover {
 }
 
 .choose-block h3 {
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Nunito Sans', sans-serif;
     text-align: center;
     color: #000;
@@ -30,9 +30,13 @@ a:hover {
 }
 
 .choose-block img {
-
+    border-radius: 50%;
+    box-shadow: 3px 3px 20px #ccc;
     max-width: 110px;
+    padding: 23px;
+
 }
+
 
 .products-main-circle {
     margin-top: 100px;
@@ -121,7 +125,7 @@ a:hover {
 .container-proj {
     width: 300px;
     height: 300px;
-    border: 9px solid #5c5959;
+    border: 5px solid #5c5959;
     border-radius: 50%;
     display: flex;
     position: relative;
@@ -133,7 +137,7 @@ a:hover {
     content: "";
     width: 300px;
     height: 300px;
-    border: 9px solid #7c797a;
+    border: 5px solid #7c797a;
     border-radius: 50%;
 
     position: absolute;
@@ -194,7 +198,11 @@ a:hover {
 }
 
 .tab-content {
-    margin-top: 30px;
+    margin-top: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .centered-title-proj {
@@ -204,7 +212,7 @@ a:hover {
 
 .field:hover span {
     transition: all .2s ease-in-out;
-    border: 2px solid #595859;
+    border: 2px solid #a68e6a;
     color: #595859;
 }
 
@@ -217,23 +225,23 @@ a:hover {
 .field:focus {
     transition: all .2s ease-in-out;
     color: #fff;
-    background: #a0a0aa;
-    background: -moz-linear-gradient(top, hsla(240,5%,65%,1) 0%, hsla(240,5%,65%,1) 21%, hsla(245,6%,38%,1) 100%);
-    background: -webkit-linear-gradient(top, hsla(240,5%,65%,1) 0%,hsla(240,5%,65%,1) 21%,hsla(245,6%,38%,1) 100%);
-    background: linear-gradient(to bottom, hsla(240,5%,65%,1) 0%,hsla(240,5%,65%,1) 21%,hsla(245,6%,38%,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0a0aa', endColorstr='#5b5a66',GradientType=0 );
+    background: #b3b1b3;
+    background: -moz-linear-gradient(left, hsla(300,1%,70%,1) 0%, hsla(300,1%,70%,1) 31%, hsla(36,25%,53%,1) 100%);
+    background: -webkit-linear-gradient(left, hsla(300,1%,70%,1) 0%,hsla(300,1%,70%,1) 31%,hsla(36,25%,53%,1) 100%);
+    background: linear-gradient(to right, hsla(300,1%,70%,1) 0%,hsla(300,1%,70%,1) 31%,hsla(36,25%,53%,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3b1b3', endColorstr='#a68e6a',GradientType=1 );
 }
 
 .field:focus span{
     transition: all .2s ease-in-out;
-    border: 4px solid #fff;
+    border: 3px solid #fff;
     color: #fff;
 
 }
 
 .field span {
     border-radius: 50%;
-    border: 2px solid #a9a5a6;
+    border: 2px solid #b3b1b3;
     width: 100%;
     display: flex;
     height: 100%;
@@ -324,16 +332,38 @@ a:hover {
 }
 
 
+.choose-block:hover .hover-img {
+
+    background: #8b8b9e;
+    background: -moz-linear-gradient(top, hsla(240,9%,58%,1) 0%, hsla(240,8%,62%,1) 45%, hsla(245,8%,69%,1) 76%, hsla(245,8%,69%,1) 100%);
+    background: -webkit-linear-gradient(top, hsla(240,9%,58%,1) 0%,hsla(240,8%,62%,1) 45%,hsla(245,8%,69%,1) 76%,hsla(245,8%,69%,1) 100%);
+    background: linear-gradient(to bottom, hsla(240,9%,58%,1) 0%,hsla(240,8%,62%,1) 45%,hsla(245,8%,69%,1) 76%,hsla(245,8%,69%,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8b8b9e', endColorstr='#abaab7',GradientType=0 );
+}
+
+.choose-block.active:hover > .hover-img {
+    display: block;
+}
+
+.choose-block.active > .hover-img {
+    background: #a0a0aa !important;
+    display: block;
+    background: -moz-linear-gradient(top, hsla(240,5%,65%,1) 0%, hsla(240,5%,65%,1) 21%, hsla(245,6%,38%,1) 100%) !important;
+    background: -webkit-linear-gradient(top, hsla(240,5%,65%,1) 0%,hsla(240,5%,65%,1) 21%,hsla(245,6%,38%,1) 100%) !important;
+    background: linear-gradient(to bottom, hsla(240,5%,65%,1) 0%,hsla(240,5%,65%,1) 21%,hsla(245,6%,38%,1) 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0a0aa', endColorstr='#5b5a66',GradientType=0 ) !important;
+}
+
+
 /*----------------------------------------- menu circular ---------------------------------------------------*/
 
 .circular-menu {
     display: block;
     position: relative;
-    margin: 30px auto;
+    margin: 0px auto;
     list-style: none;
     padding: 0;
 
-    transform: scale(.9);
 }
 
 .circular-menu-container {
@@ -367,8 +397,8 @@ a:hover {
     background-color: #fff !important;
 }
 .circular-menu li:hover {
-    -webkit-transform: translate(-50%, -50%) scale(1.025) !important;
-    transform: translate(-50%, -50%) scale(1.025) !important;
+    -webkit-transform: translate(-50%, -50%) !important;
+    transform: translate(-50%, -50%) !important;
 }
 .circular-menu li:hover .progress__value, .circular-menu .focus .progress__value {
     stroke-dashoffset: 0% !important;
@@ -477,6 +507,17 @@ a:hover {
     border-radius: 0;
 }
 
+.circular-projects .nav-tabs li {
+    display: block;
+    height: 100%;
+}
+
+.circular-projects .nav-tabs li a {
+    display: block;
+    position: relative;
+    z-index: 500;
+}
+
 .info-circular {
     position: absolute;
     top: 6%;
@@ -491,7 +532,7 @@ a:hover {
 
     .info-circular {
         position: absolute;
-        top: 20%;
+        top: 20% !important;
         right: 2%;
     }
 
@@ -547,17 +588,18 @@ a:hover {
     .circular-menu {
         margin-top: 0;
         transform: scale(.8);
+        margin-bottom: 0;
     }
 }
 
-@media screen and (max-height: 960px) {
+@media screen and (max-height: 768px) {
     .title-default {
         font-size: 30px;
         margin-bottom: 20px;
     }
     .choose-block,
     .choose-block img {
-        max-width: 60px;
+        max-width: 100px;
         width: 100%;
     }
     .choose-block h3 {
@@ -592,18 +634,18 @@ a:hover {
 }
 
 .circular-projects {
-
+    display: flex;
 }
 
 .title-h2-default {
-    margin: 20px auto;
-    border-top: 4px solid #545354;
-    border-bottom: 4px solid #545354;
-    padding: 0 25px 0 0;
+    margin: 10px auto;
+    border-top: 3px solid #545354;
+    border-bottom: 3px solid #545354;
+    padding: 0;
     text-transform: uppercase;
     color: #545354;
     position: relative;
-    font-size: 60px;
+    font-size: 36px;
     font-family: 'Nunito Sans', sans-serif;
     display: table;
     font-weight: 600;
@@ -611,4 +653,17 @@ a:hover {
 
 .service-height {
     height: 82%;
+}
+
+@media screen and (max-width: 992px){
+    .circular-menu-container {
+        align-items: center;
+        display: flex;
+        height: 100vh;
+        flex-wrap: wrap;
+        padding: 0 15px;
+        overflow: hidden;
+    }
+
+
 }

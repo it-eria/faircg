@@ -22,10 +22,12 @@ $( document ).ready(function() {
     var heightOfLine = 30;
     var menuSize = $('.circular-menu li').length * heightOfLine * 4 + sizeOfFirst;
     var zIndex = 1;
-    var color1 = 'B3B1B3';
-    var colorDiff = 329741;
+    var color1 = 'aac8e8';
+    var color2 = 'b4cde8';
+    var colorDiff = parseInt(color2, 16) - parseInt(color1, 16);
     var startRadius = 9 * $('.circular-menu li').length;
     var step = startRadius / $('.circular-menu li').length - 1;
+    console.log(colorDiff);
     $('.circular-menu').css({
         "width": menuSize + 'px',
         "height": menuSize + 'px'
@@ -77,12 +79,10 @@ $( document ).ready(function() {
     });
 
     $('.modal-menu-container').removeClass('page-current');
-    $(".circular-menu li a").click(function() {
+    $(".circular-menu li").click(function() {
         $('.modal-menu-container').fadeOut(0);
-
-        var target = $(this).attr("href");
+        var target = $(this).find("a").attr("href");
         $('.page-current').add(target).fadeIn(700);
-
     });
 
 
@@ -96,7 +96,7 @@ $( document ).ready(function() {
     });
 
     function showCircles(currentProj) {
-        var radius = ($(window).height() > 960) ? 150 : 75;
+        var radius = ($(window).height() > 768) ? 150 : 75;
         var fields = $(currentProj + ' .field'),
             width = $(currentProj).width(),
             height = $(currentProj).height();
@@ -104,13 +104,13 @@ $( document ).ready(function() {
             step = (2*Math.PI) / 6;
 
         if(fields.length > 6) {
-            width = ($(window).height() > 960) ? 600 : 350;
-            height = ($(window).height() > 960) ? 600 : 350;
+            width = ($(window).height() > 768) ? 600 : 350;
+            height = ($(window).height() > 768) ? 600 : 350;
         }
 
         fields.each(function(index) {
             if(index > 5) {
-                radius = ($(window).height() > 960) ? 300 : 175;
+                radius = ($(window).height() > 768) ? 300 : 175;
                 $(currentProj).addClass("double-circle");
             } else if(index > 11) {
                 $(this).remove();
@@ -118,15 +118,27 @@ $( document ).ready(function() {
             var x = Math.round(width/2 + radius * Math.cos(angle) - $(this).width()/2);
             var y = Math.round(height/2 + radius * Math.sin(angle) - $(this).height()/2);
             $(this).css({
-                left: ($(window).height() > 960) ? 'calc('+ (x - 10) +'px)' : 'calc('+ (x - 10) +'px)',
-                top: ($(window).height() > 960) ? 'calc('+ (y - 10) +'px)' : 'calc('+ (y - 10) +'px)'
+                left: ($(window).height() > 768) ? 'calc('+ (x - 10) +'px)' : 'calc('+ (x - 10) +'px)',
+                top: ($(window).height() > 768) ? 'calc('+ (y - 10) +'px)' : 'calc('+ (y - 10) +'px)'
             });
             angle += step;
         });
     }
 
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-        showCircles($(e.target).attr('href') + ' .container-proj');
+        if($($(e.target).attr('href') + ' .container-proj .field').length > 0) {
+            $('.circular-projects').css({
+                "height": "100vh"
+            });
+            showCircles($(e.target).attr('href') + ' .container-proj');
+        } else {
+            // $('.container-proj').css({
+            //     "height": 0
+            // });
+            $('.circular-projects').css({
+                "height": "auto"
+            });
+        }
     });
 
     $('.modal-menu-container').removeClass('page-current');
@@ -148,7 +160,7 @@ $( document ).ready(function() {
     });
 
     function calculateNewScale() {
-        var percentageOn1 = ($(".service-height").height()) / ($(".circular-menu").height() + 500);
+        var percentageOn1 = ($(".service-height").height()) / ($(".circular-menu").height() + 50);
         $(".circular-menu").css(
             {
                 "-moz-transform": "scale("+percentageOn1 +")",
@@ -156,6 +168,9 @@ $( document ).ready(function() {
                 "transform": "scale("+percentageOn1 +")"
             });
         }
+
+
+
 
 
 
