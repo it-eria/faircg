@@ -22,11 +22,11 @@ $( document ).ready(function() {
         return angle;
     };
 
-    var sizeOfFirst = 210;
+    var sizeOfFirst = 110;
     var heightOfLine = 30;
     var menuSize = $('.circular-menu li').length * heightOfLine * 4 + sizeOfFirst;
     var zIndex = 1;
-    var color1 = 'aac8e8';
+    var color1 = 'bdd2e8';
     var color2 = 'b4cde8';
     var colorDiff = parseInt(color2, 16) - parseInt(color1, 16);
     var startRadius = 9 * $('.circular-menu li').length;
@@ -43,6 +43,7 @@ $( document ).ready(function() {
         var circleLength = 2 * Math.PI * radius;
         var progress = value / 100;
         var dashoffset = circleLength * (1 - progress);
+        // var svgObj = '<svg class="progress" width="'+size+'" height="'+size+'" viewBox="0 0 '+size+' '+size+'" style="transform: rotate(-'+ currentRotate +'deg);"><circle class="progress__value" cx="'+size/2+'" cy="'+size/2+'" r="'+(size/2 - heightOfLine - 16)+'" stroke-width="'+(heightOfLine + 64) +'" stroke="'+bg+'" style="stroke-dasharray: '+circleLength+'; stroke-dashoffset: '+dashoffset+';"/></svg>';
         var svgObj = '<svg class="progress" width="'+size+'" height="'+size+'" viewBox="0 0 '+size+' '+size+'" style="transform: rotate(-'+ currentRotate +'deg);"><circle class="progress__value" cx="'+size/2+'" cy="'+size/2+'" r="'+(size/2 - heightOfLine - 16)+'" stroke-width="'+(heightOfLine + 64) +'" stroke="'+bg+'" style="stroke-dasharray: '+circleLength+'; stroke-dashoffset: '+dashoffset+';"/></svg>';
         prependTo.prepend(svgObj);
     }
@@ -57,17 +58,17 @@ $( document ).ready(function() {
             "height": heightOfLine * 4 * ($('.circular-menu li').length - index) + sizeOfFirst,
             "z-index": zIndex
         });
-        var currentRadius = parseFloat($(this).width())/2;
+        var currentRadius = parseFloat($(this).width()/2.5);
         var l = $(this).find('a').width();
         var angle = (parseFloat(l)*360)/(2*Math.PI*currentRadius);
         $(this).css({
             'transform': 'translate(-50%, -50%) rotate('+angle/2+'deg)'
         });
-        $(this).find('a').arctext({radius:  currentRadius});
+        $(this).find('a').arctext({radius: currentRadius });
         if(index != $('.circular-menu li').length -1) {
             generateSVG($(this), '#'+color1, startRadius, 90 + angle/2);
         }
-        color1 = (parseInt(color1, 16) - colorDiff).toString(16)
+        color1 = (parseInt(color1, 16) - colorDiff).toString(16);
         ++zIndex;
         startRadius -= step;
     });
@@ -98,7 +99,7 @@ $( document ).ready(function() {
     });
 
     function showCircles(currentProj) {
-        var radius = ($(window).height() > 768) ? 150 : 75;
+        var radius = ($(window).height() > 640) ? 170 : 100;
         var fields = $(currentProj + ' .field'),
             width = $(currentProj).width(),
             height = $(currentProj).height();
@@ -106,14 +107,14 @@ $( document ).ready(function() {
             step = (2*Math.PI) / 6;
 
         if(fields.length > 6) {
-            width = ($(window).height() > 768) ? 600 : 350;
-            height = ($(window).height() > 768) ? 600 : 350;
+            width = ($(window).height() > 640) ? 750 : 450;
+            height = ($(window).height() > 640) ? 750 : 450;
 
         }
 
         fields.each(function(index) {
             if(index > 5) {
-                radius = ($(window).height() > 768) ? 300 : 175;
+                radius = ($(window).height() > 640) ? 350 : 220;
                 $(currentProj).addClass("double-circle");
             } else if(index > 11) {
                 $(this).remove();
@@ -121,8 +122,8 @@ $( document ).ready(function() {
             var x = Math.round(width/2 + radius * Math.cos(angle) - $(this).width()/2);
             var y = Math.round(height/2 + radius * Math.sin(angle) - $(this).height()/2);
             $(this).css({
-                left: ($(window).height() > 768) ? 'calc('+ (x - 10) +'px)' : 'calc('+ (x - 10) +'px)',
-                top: ($(window).height() > 768) ? 'calc('+ (y - 10) +'px)' : 'calc('+ (y - 10) +'px)'
+                left: ($(window).height() > 640) ? 'calc('+ (x - 10) +'px)' : 'calc('+ (x - 10) +'px)',
+                top: ($(window).height() > 640) ? 'calc('+ (y - 10) +'px)' : 'calc('+ (y - 10) +'px)'
             });
             angle += step;
         });
@@ -163,7 +164,7 @@ $( document ).ready(function() {
     });
 
     function calculateNewScale() {
-        var percentageOn1 = ($(".service-height").height()) / ($(".circular-menu").height() + 200);
+        var percentageOn1 = ($(".service-height").height()) / ($(".circular-menu").height() + 50);
         $(".circular-menu").css(
             {
                 "-moz-transform": "scale("+percentageOn1 +")",
@@ -194,6 +195,11 @@ $( document ).ready(function() {
     $( window ).on('resize', function() {
         recalcHeightOnMobile();
     });
+
+    if($(window).width() < 993) {
+        $('.service-height').removeClass('container');
+    }
+
 
 
 

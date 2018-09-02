@@ -140,8 +140,8 @@ a:hover {
 }
 .container-proj:before {
     content: "";
-    width: 300px;
-    height: 300px;
+    width: 330px;
+    height: 330px;
     border: 5px solid #7c797a;
     border-radius: 50%;
 
@@ -152,8 +152,8 @@ a:hover {
     display: none;
 }
 .container-proj.double-circle {
-    width: 600px;
-    height: 600px;
+    width: 750px;
+    height: 750px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,11 +176,11 @@ a:hover {
 }
 
 .field {
-    width: 120px;
+    width: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 120px;
+    height: 160px;
     border-radius: 50%;
     position: absolute;
     background: #fff;
@@ -217,7 +217,7 @@ a:hover {
 
 .field:hover span {
     transition: all .2s ease-in-out;
-    border: 2px solid #a68e6a;
+    border: 2px solid #b4ceea;
     color: #595859;
 }
 
@@ -230,11 +230,7 @@ a:hover {
 .field:focus {
     transition: all .2s ease-in-out;
     color: #fff;
-    background: #b3b1b3;
-    background: -moz-linear-gradient(left, hsla(300,1%,70%,1) 0%, hsla(300,1%,70%,1) 31%, hsla(36,25%,53%,1) 100%);
-    background: -webkit-linear-gradient(left, hsla(300,1%,70%,1) 0%,hsla(300,1%,70%,1) 31%,hsla(36,25%,53%,1) 100%);
-    background: linear-gradient(to right, hsla(300,1%,70%,1) 0%,hsla(300,1%,70%,1) 31%,hsla(36,25%,53%,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3b1b3', endColorstr='#a68e6a',GradientType=1 );
+    background-color: #b4ceea;
 }
 
 .field:focus span{
@@ -246,14 +242,14 @@ a:hover {
 
 .field span {
     border-radius: 50%;
-    border: 2px solid #b3b1b3;
+    border: 2px solid #b4ceea;
     width: 100%;
     display: flex;
     height: 100%;
     justify-content: center;
     text-align: center;
     align-items: center;
-    font-size: 16px;
+    font-size: 20px;
     color: #a9a5a6;
 }
 
@@ -339,11 +335,7 @@ a:hover {
 
 .choose-block:hover .hover-img {
 
-    background: #8b8b9e;
-    background: -moz-linear-gradient(top, hsla(240,9%,58%,1) 0%, hsla(240,8%,62%,1) 45%, hsla(245,8%,69%,1) 76%, hsla(245,8%,69%,1) 100%);
-    background: -webkit-linear-gradient(top, hsla(240,9%,58%,1) 0%,hsla(240,8%,62%,1) 45%,hsla(245,8%,69%,1) 76%,hsla(245,8%,69%,1) 100%);
-    background: linear-gradient(to bottom, hsla(240,9%,58%,1) 0%,hsla(240,8%,62%,1) 45%,hsla(245,8%,69%,1) 76%,hsla(245,8%,69%,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8b8b9e', endColorstr='#abaab7',GradientType=0 );
+    background-color: #d3dde8;
 }
 
 .choose-block.active:hover > .hover-img {
@@ -351,12 +343,12 @@ a:hover {
 }
 
 .choose-block.active > .hover-img {
-    background: #a0a0aa !important;
+    background: #72a6db;
     display: block;
-    background: -moz-linear-gradient(top, hsla(240,5%,65%,1) 0%, hsla(240,5%,65%,1) 21%, hsla(245,6%,38%,1) 100%) !important;
-    background: -webkit-linear-gradient(top, hsla(240,5%,65%,1) 0%,hsla(240,5%,65%,1) 21%,hsla(245,6%,38%,1) 100%) !important;
-    background: linear-gradient(to bottom, hsla(240,5%,65%,1) 0%,hsla(240,5%,65%,1) 21%,hsla(245,6%,38%,1) 100%) !important;
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0a0aa', endColorstr='#5b5a66',GradientType=0 ) !important;
+    background: -moz-linear-gradient(left, hsla(210,59%,65%,1) 0%, hsla(209,56%,75%,1) 100%);
+    background: -webkit-linear-gradient(left, hsla(210,59%,65%,1) 0%,hsla(209,56%,75%,1) 100%);
+    background: linear-gradient(to right, hsla(210,59%,65%,1) 0%,hsla(209,56%,75%,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#72a6db', endColorstr='#9dc1e3',GradientType=1 );
 }
 
 
@@ -407,6 +399,13 @@ a:hover {
 }
 .circular-menu li:hover .progress__value, .circular-menu .focus .progress__value {
     stroke-dashoffset: 0% !important;
+    stroke: #ADC4DB;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out ;
+    -ms-transition: all .3s ease-in-out ;
+    -o-transition: all .3s ease-in-out ;
+    transition: all .3s ease-in-out ;
+
 }
 
 
@@ -432,14 +431,14 @@ a:hover {
     font-family: 'Nunito Sans', sans-serif;
     left: 50%;
     top: 8px;
-    font-size: 16px;
+    font-size: 25px;
     white-space: nowrap;
     text-align: left;
     text-decoration: none;
-    color: #fff;
+    color: #545354;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    padding-left: 25px;
+    padding-left: 0px;
 }
 .circular-menu li h3 {
     color: #545354;
@@ -466,7 +465,7 @@ a:hover {
 }
 
 .toggle-content {
-    border-left: 2px solid #3F3F3F;
+    border-left: 2px solid #74A7DB;
     padding-left: 15px;
 }
 
@@ -474,7 +473,7 @@ a:hover {
     font-size: 30px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #3F3F3F;
+    color: #74A7DB;
     font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -597,7 +596,7 @@ a:hover {
     }
 }
 
-@media screen and (max-height: 768px) {
+@media screen and (max-height: 650px) {
     .title-default {
         font-size: 30px;
         margin-bottom: 20px;
@@ -613,28 +612,28 @@ a:hover {
     }
     .container-proj,
     .container-proj:before {
-        width: 150px;
+        width: 200px;
         /*width: 150vw;*/
-        height: 150px;
+        height: 200px;
     }
     .container-proj.double-circle {
-        width: 350px;
+        width: 450px;
         /*width: 200vw;*/
-        height: 350px;
+        height: 450px;
     }
     .field {
-        width: 70px;
-        height: 70px;
+        width: 100px;
+        height: 100px;
     }
     .field span {
-        font-size: 8px;
+        font-size: 12px;
     }
     .tab-content {
         margin-top: 5px;
     }
 
     .centered-title-proj {
-        font-size: 11px;
+        font-size: 14px;
     }
 
 
@@ -646,8 +645,8 @@ a:hover {
 
 .title-h2-default {
     margin: 10px auto;
-    border-top: 3px solid #545354;
-    border-bottom: 3px solid #545354;
+    border-top: 3px solid #adc4da;
+    border-bottom: 3px solid #adc4da;
     padding: 0;
     text-transform: uppercase;
     color: #545354;
@@ -662,6 +661,7 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    width: 100%;
     position: relative;
 }
 
@@ -672,7 +672,7 @@ a:hover {
 
 .flex-style {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .centered-style {
@@ -812,3 +812,14 @@ a:hover {
 }
 
 
+
+.modal-menu-container p, .modal-menu-container ul li {
+    font-size: 16px;
+}
+
+
+.circular-menu-wrapper {
+    height: auto;
+    width: 100%;
+    display: flex;
+}
