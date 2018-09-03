@@ -2,11 +2,6 @@
 
 $( document ).ready(function() {
 
-
-
-
-
-
     //MENU CIRCULAR
 
     $.fn.rotationDegrees = function () {
