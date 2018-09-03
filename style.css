@@ -845,7 +845,7 @@ a:hover {
         display: flex;
         position: relative;
         flex-wrap: wrap;
-        justify-content: baseline;
+        justify-content: center;
         align-items: center;
     }
 
