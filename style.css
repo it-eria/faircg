@@ -733,6 +733,14 @@ a:hover {
 
 
 @media screen and (max-width: 992px){
+
+    .choose-block h3 {
+        font-size: 18px;
+    }
+
+    .tab-content {
+        padding-top: 0;
+    }
     .circular-menu li a {
         font-size: 18px;
     }
