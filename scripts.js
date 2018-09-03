@@ -26,8 +26,8 @@ $( document ).ready(function() {
     var heightOfLine = 30;
     var menuSize = $('.circular-menu li').length * heightOfLine * 4 + sizeOfFirst;
     var zIndex = 1;
-    var color1 = 'bdd2e8';
-    var color2 = 'b4cde8';
+    var color1 = 'A2C2E0';
+    var color2 = '9BBEDD';
     var colorDiff = parseInt(color2, 16) - parseInt(color1, 16);
     var startRadius = 9 * $('.circular-menu li').length;
     var step = startRadius / $('.circular-menu li').length - 1;

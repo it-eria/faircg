@@ -1,12 +1,16 @@
 .choose-block {
     width: 100%;
     max-width: 125px;
+    max-height: 125px;
     padding: 0 10px;
+    display: flex;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     -webkit-border-radius: 50%;
-
     -moz-border-radius: 50%;
     border-radius: 50%;
+    flex-direction: column;
 }
 
 a:hover {
@@ -14,12 +18,12 @@ a:hover {
 }
 
 .choose-block h3 {
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Nunito Sans', sans-serif;
     text-align: center;
     color: #000;
     text-decoration: none;
-    margin-top: 20px;
+    margin-top: 10px;
 
 }
 
@@ -32,8 +36,10 @@ a:hover {
 .choose-block img {
     border-radius: 50%;
     box-shadow: 3px 3px 20px #ccc;
-    max-width: 110px;
-    padding: 23px;
+    max-width: 75px;
+    padding: 15px;
+    width: 100%;
+    height: 75px;
 
 }
 
@@ -130,7 +136,7 @@ a:hover {
 .container-proj {
     width: 300px;
     height: 300px;
-    border: 5px solid #5c5959;
+    border: 5px solid #f0f0ef;
     border-radius: 50%;
     display: flex;
     position: relative;
@@ -140,11 +146,10 @@ a:hover {
 }
 .container-proj:before {
     content: "";
-    width: 330px;
-    height: 330px;
-    border: 5px solid #7c797a;
+    width: 370px;
+    height: 370px;
+    border: 5px solid #d8e1eb;
     border-radius: 50%;
-
     position: absolute;
     top: 50%;
     left: calc(50%);
@@ -365,6 +370,7 @@ a:hover {
 
 .circular-menu-container {
     align-items: center;
+    border-bottom: 1px solid #adc4da;
     display: flex;
     height: 100vh;
     flex-direction: column;
