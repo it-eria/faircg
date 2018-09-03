@@ -729,6 +729,10 @@ a:hover {
 
 @media screen and (max-width: 992px){
 
+    .margin-25 {
+        margin: 25px 0;
+    }
+
     .field span {
         font-size: 16px;
     }
