@@ -388,6 +388,9 @@ a:hover {
     overflow: hidden;
     top: 50%;
     left: 50%;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -397,6 +400,7 @@ a:hover {
     background-color: #fff;
     text-align: left;
 }
+
 .circular-menu li:last-child {
     background-color: #fff !important;
 }
@@ -424,6 +428,8 @@ a:hover {
     left: 0;
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
+    display: block;
+    transform-style: preserve-3d;
 }
 .circular-menu li .progress__value {
     fill: none;
