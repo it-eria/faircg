@@ -97,7 +97,7 @@ $( document ).ready(function() {
 
 
        function showCircles(currentProj) {
-           var radius = ($(window).height() > 640) ? 170 : 100;
+           var radius = ($(window).height() > 760) ? 170 : 100;
            var fields = $(currentProj + ' .field'),
                width = $(currentProj).width(),
                height = $(currentProj).height();
@@ -105,14 +105,14 @@ $( document ).ready(function() {
                step = (2*Math.PI) / 6;
 
            if(fields.length > 6) {
-               width = ($(window).height() > 640) ? 750 : 450;
-               height = ($(window).height() > 640) ? 750 : 450;
+               width = ($(window).height() > 760) ? 750 : 450;
+               height = ($(window).height() > 760) ? 750 : 450;
 
            }
 
            fields.each(function(index) {
                if(index > 5) {
-                   radius = ($(window).height() > 640) ? 350 : 220;
+                   radius = ($(window).height() > 760) ? 350 : 220;
                    $(currentProj).addClass("double-circle");
                } else if(index > 11) {
                    $(this).remove();
@@ -121,8 +121,8 @@ $( document ).ready(function() {
                    var x = Math.round(width/2 + radius * Math.cos(angle) - $(this).width()/2);
                    var y = Math.round(height/2 + radius * Math.sin(angle) - $(this).height()/2);
                    $(this).css({
-                       left: ($(window).height() > 640) ? 'calc('+ (x - 10) +'px)' : 'calc('+ (x - 10) +'px)',
-                       top: ($(window).height() > 640) ? 'calc('+ (y - 10) +'px)' : 'calc('+ (y - 10) +'px)'
+                       left: ($(window).height() > 760) ? 'calc('+ (x - 10) +'px)' : 'calc('+ (x - 10) +'px)',
+                       top: ($(window).height() > 760) ? 'calc('+ (y - 10) +'px)' : 'calc('+ (y - 10) +'px)'
                    });
                    angle += step;
                }

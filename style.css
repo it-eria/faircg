@@ -605,7 +605,7 @@ a:hover {
     }
 }
 
-@media screen and (max-height: 650px) {
+@media screen and (max-height: 760px) {
     .title-default {
         font-size: 30px;
         margin-bottom: 20px;
@@ -733,7 +733,9 @@ a:hover {
 
 
 @media screen and (max-width: 992px){
-
+    .circular-menu li a {
+        font-size: 18px;
+    }
 
 
     .field span {
