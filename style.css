@@ -213,6 +213,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 45px;
 }
 
 .centered-title-proj {
