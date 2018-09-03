@@ -40,7 +40,7 @@ $( document ).ready(function() {
         var circleLength = 2 * Math.PI * radius;
         var progress = value / 100;
         var dashoffset = circleLength * (1 - progress);
-        var svgObj = '<svg version="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="progress" width="'+size+'" height="'+size+'" viewBox="0 0 '+size+' '+size+'" style="transform: rotate(-'+ currentRotate +'deg);"><circle class="progress__value" cx="'+size/2+'" cy="'+size/2+'" r="'+(size/2 - heightOfLine - 16)+'" stroke-width="'+(heightOfLine + 64) +'" stroke="'+bg+'" style="stroke-dasharray: '+circleLength+'; stroke-dashoffset: '+dashoffset+';"/></svg>';
+        var svgObj = '<svg class="progress" width="'+size+'" height="'+size+'" viewBox="0 0 '+size+' '+size+'" style="transform: rotate(-'+ currentRotate +'deg);"><circle class="progress__value" cx="'+size/2+'" cy="'+size/2+'" r="'+(size/2 - heightOfLine - 16)+'" stroke-width="'+(heightOfLine + 64) +'" stroke="'+bg+'" style="stroke-dasharray: '+circleLength+'; stroke-dashoffset: '+dashoffset+';"/></svg>';
         prependTo.prepend(svgObj);
     }
 
@@ -58,9 +58,8 @@ $( document ).ready(function() {
         var l = $(this).find('a').width();
         var angle = (parseFloat(l)*360)/(2*Math.PI*currentRadius);
         $(this).css({
-            'transform': 'translate(-50%, -50%) rotate3d(0, 0, 1, '+angle/2+'deg)'
+            'transform': 'translate(-50%, -50%) rotate('+angle/2+'deg)'
         });
-
         $(this).find('a').arctext({radius: currentRadius });
         if(index != $('.circular-menu li').length -1) {
             generateSVG($(this), '#'+color1, startRadius, 90 + angle/2);
