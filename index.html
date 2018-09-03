@@ -272,7 +272,7 @@
 <script>
 
     // $( ".scrollTo" ).mouseover(function(e) {
-    $(".scrollTo").on('click touchstart', function (e) {
+    $(".scrollTo").on('click', function (e) {
         e.preventDefault();
         var current = $(this).parent();
         $('html, body').animate({
