@@ -27,10 +27,6 @@
                 <li><a href="#three">Menu item</a></li>
                 <li><a href="#three">Menu item</a></li>
                 <li><a href="#three">Menu item</a></li>
-
-
-
-
                 <li><h3>Our Services</h3></li>
             </ul>
         </div>
@@ -110,57 +106,6 @@
                     </div>
                 </a>
             </li>
-
-            <!--<li>-->
-                <!--<a data-toggle="tab" href="#crm">-->
-                    <!--<div class="choose-block">-->
-
-                        <!--<img class="static-img" src="1.png" alt="img"/>-->
-                        <!--<img class="hover-img" src="2.png" alt="img"/>-->
-                        <!--<h3>CRM</h3>-->
-                    <!--</div>-->
-                <!--</a>-->
-            <!--</li>-->
-
-            <!--<li>-->
-                <!--<a data-toggle="tab" href="#marketing">-->
-                    <!--<div class="choose-block">-->
-                        <!--<img class="static-img" src="1.png" alt="img"/>-->
-                        <!--<img class="hover-img" src="2.png" alt="img"/>-->
-                        <!--<h3>MARKETING</h3>-->
-                    <!--</div>-->
-                <!--</a>-->
-            <!--</li>-->
-
-            <!--<li>-->
-                <!--<a data-toggle="tab" href="#commerce">-->
-                    <!--<div class="choose-block">-->
-                        <!--<img class="static-img" src="1.png" alt="img"/>-->
-                        <!--<img class="hover-img" src="2.png" alt="img"/>-->
-                        <!--<h3>COMMERCE</h3>-->
-                    <!--</div>-->
-                <!--</a>-->
-            <!--</li>-->
-
-            <!--<li>-->
-                <!--<a data-toggle="tab" href="#hosting">-->
-                    <!--<div class="choose-block">-->
-                        <!--<img class="static-img" src="1.png" alt="img"/>-->
-                        <!--<img class="hover-img" src="2.png" alt="img"/>-->
-                        <!--<h3>HOSTING</h3>-->
-                    <!--</div>-->
-                <!--</a>-->
-            <!--</li>-->
-
-            <!--<li>-->
-                <!--<a data-toggle="tab" href="#integration">-->
-                    <!--<div class="choose-block">-->
-                        <!--<img class="static-img" src="1.png" alt="img"/>-->
-                        <!--<img class="hover-img" src="2.png" alt="img"/>-->
-                        <!--<h3>INTEGRATION</h3>-->
-                    <!--</div>-->
-                <!--</a>-->
-            <!--</li>-->
         </ul>
         <div class="tab-content position-relative">
             <div id="frontend" class="tab-pane fade in">
@@ -324,7 +269,9 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
-    $(".scrollTo").on('click', function (e) {
+
+    $( ".scrollTo" ).mouseover(function(e) {
+    // $(".scrollTo").on('click', function (e) {
         e.preventDefault();
         var current = $(this).parent();
         $('html, body').animate({
