@@ -728,6 +728,50 @@ a:hover {
 
 
 @media screen and (max-width: 992px){
+
+    .field span {
+        font-size: 16px;
+    }
+
+    .field {
+        width: 120px;
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        height: 120px;
+        border-radius: 50%;
+        z-index: 99999;
+        vertical-align: top;
+        position: relative;
+        margin: 0 5px;
+        background: #fff;
+        padding: 5px;
+        box-shadow: 0 0 10px #ccc;
+    }
+
+    .field:nth-child(2n-1) {
+        margin-top: 35px;
+    }
+
+    .items-menu-circle {
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-proj.double-circle {
+        width: 100%;
+        height: auto;
+        border: none;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .container-proj:before, .centered-title-proj {
+        display: none !important;
+    }
     .circular-menu-container {
         /*align-items: center;*/
         display: block;
@@ -786,7 +830,16 @@ a:hover {
         -moz-transform: scale(1);
         -ms-transform: scale(1);
         -o-transform: scale(1);
-        transform: scale(1);
+
+        width: 100%;
+        height: auto;
+        border: none;
+        border-radius: initial;
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        justify-content: baseline;
+        align-items: center;
     }
 
     .centered-style {
@@ -803,7 +856,7 @@ a:hover {
     }
 
     .items-menu-circle {
-        transform: scale(0.75);
+        transform: scale(1);
     }
     
     /*.service-height {*/

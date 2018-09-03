@@ -1,3 +1,5 @@
+
+
 $( document ).ready(function() {
 
 
@@ -98,36 +100,46 @@ $( document ).ready(function() {
         $(this).addClass('active');
     });
 
-    function showCircles(currentProj) {
-        var radius = ($(window).height() > 640) ? 170 : 100;
-        var fields = $(currentProj + ' .field'),
-            width = $(currentProj).width(),
-            height = $(currentProj).height();
-        var angle = 0,
-            step = (2*Math.PI) / 6;
 
-        if(fields.length > 6) {
-            width = ($(window).height() > 640) ? 750 : 450;
-            height = ($(window).height() > 640) ? 750 : 450;
+       function showCircles(currentProj) {
+           var radius = ($(window).height() > 640) ? 170 : 100;
+           var fields = $(currentProj + ' .field'),
+               width = $(currentProj).width(),
+               height = $(currentProj).height();
+           var angle = 0,
+               step = (2*Math.PI) / 6;
 
-        }
+           if(fields.length > 6) {
+               width = ($(window).height() > 640) ? 750 : 450;
+               height = ($(window).height() > 640) ? 750 : 450;
 
-        fields.each(function(index) {
-            if(index > 5) {
-                radius = ($(window).height() > 640) ? 350 : 220;
-                $(currentProj).addClass("double-circle");
-            } else if(index > 11) {
-                $(this).remove();
-            }
-            var x = Math.round(width/2 + radius * Math.cos(angle) - $(this).width()/2);
-            var y = Math.round(height/2 + radius * Math.sin(angle) - $(this).height()/2);
-            $(this).css({
-                left: ($(window).height() > 640) ? 'calc('+ (x - 10) +'px)' : 'calc('+ (x - 10) +'px)',
-                top: ($(window).height() > 640) ? 'calc('+ (y - 10) +'px)' : 'calc('+ (y - 10) +'px)'
-            });
-            angle += step;
-        });
-    }
+           }
+
+           fields.each(function(index) {
+               if(index > 5) {
+                   radius = ($(window).height() > 640) ? 350 : 220;
+                   $(currentProj).addClass("double-circle");
+               } else if(index > 11) {
+                   $(this).remove();
+               }
+               if(($(window).width() > 992)) {
+                   var x = Math.round(width/2 + radius * Math.cos(angle) - $(this).width()/2);
+                   var y = Math.round(height/2 + radius * Math.sin(angle) - $(this).height()/2);
+                   $(this).css({
+                       left: ($(window).height() > 640) ? 'calc('+ (x - 10) +'px)' : 'calc('+ (x - 10) +'px)',
+                       top: ($(window).height() > 640) ? 'calc('+ (y - 10) +'px)' : 'calc('+ (y - 10) +'px)'
+                   });
+                   angle += step;
+               }
+
+
+           });
+       }
+
+
+
+
+
 
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         if($($(e.target).attr('href') + ' .container-proj .field').length > 0) {
@@ -226,6 +238,8 @@ $( document ).ready(function() {
 //
 //     });
 // });
+
+
 
 
 
