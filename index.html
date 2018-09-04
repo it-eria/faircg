@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,900" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900" rel="stylesheet">
 </head>
 <body>
 
@@ -271,17 +272,30 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
-    // $( ".scrollTo" ).mouseover(function(e) {
-    $(".scrollTo").on('click', function (e) {
-        e.preventDefault();
-        var current = $(this).parent();
-        $('html, body').animate({
-            scrollTop: current.offset().top + current.outerHeight()
-        }, 300);
-    });
-    $(".nav-tabs li a").on("touchstart", function(){
-        $(this).trigger( 'click' );
-    });
+    if($(window).width() > 992) {
+        $(".scrollTo").on('click', function (e) {
+            e.preventDefault();
+            var current = $(this).parent();
+            $('html, body').animate({
+                scrollTop: current.offset().top + current.outerHeight()
+            }, 0);
+        });
+        $(".nav-tabs li a").on("touchstart", function(){
+            $(this).trigger( 'click' );
+        });
+    }
+    else  {
+        $(".scrollTo").on('click', function (e) {
+            e.preventDefault();
+            var current = $(this).parent();
+            $('html, body').animate({
+                scrollTop: current.offset().top + current.outerHeight()
+            }, 1000);
+        });
+        $(".nav-tabs li a").on("touchstart", function(){
+            $(this).trigger( 'click' );
+        });
+    }
 </script>
 
 <script src="https://tympanus.net/Development/Arctext/js/jquery.arctext.js"></script>

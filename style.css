@@ -19,7 +19,7 @@ a:hover {
 
 .choose-block h3 {
     font-size: 16px;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     color: #000;
     text-decoration: none;
@@ -196,7 +196,7 @@ a:hover {
 
 .title-default {
     font-size: 60px;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     color: #3F3F3F;
     text-transform: uppercase;
@@ -270,16 +270,16 @@ a:hover {
 
 .modal-menu-container h2 {
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 400;
     text-transform: uppercase;
     color: #3F3F3F;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .modal-menu-container p {
     font-size: 16px;
-    font-weight: 600;
-    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .modal-menu-container ul {
@@ -289,8 +289,8 @@ a:hover {
 
 .modal-menu-container ul li {
     font-size: 16px;
-    font-weight: 600;
-    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .mw-200 {
@@ -436,8 +436,8 @@ a:hover {
     position: absolute;
     z-index: 500;
     width: auto;
-    font-weight: 600;
-    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
     left: 50%;
     top: 8px;
     font-size: 25px;
@@ -454,7 +454,7 @@ a:hover {
     display: block;
     margin: 0;
     padding: 0;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     width: 100%;
     white-space: wrap;
     text-transform: uppercase;
@@ -483,13 +483,13 @@ a:hover {
     font-weight: 600;
     text-transform: uppercase;
     color: #74A7DB;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .modal-menu-container p {
     font-size: 16px;
     font-weight: 600;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .modal-menu-container ul {
@@ -500,7 +500,7 @@ a:hover {
 .modal-menu-container ul li {
     font-size: 16px;
     font-weight: 600;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -654,16 +654,21 @@ a:hover {
 
 .title-h2-default {
     margin: 10px auto;
-    border-top: 3px solid #adc4da;
-    border-bottom: 3px solid #adc4da;
     padding: 0;
     text-transform: uppercase;
-    color: #545354;
+    color: #000;
     position: relative;
-    font-size: 36px;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
     display: table;
-    font-weight: 600;
+    font-weight: 400;
+}
+
+.title-and-descr-height p {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #000;
 }
 
 .service-height {
