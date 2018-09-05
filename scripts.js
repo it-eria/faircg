@@ -1,4 +1,10 @@
 $( document ).ready(function() {
+    $(".mask").css({
+        "height": ($(".item-gallery").height() - $(".title-on-item").height()) + "px"
+    });
+    $(".item-gallery").css({
+        "height": $(".item-gallery").width() + "px"
+    });
     //MENU CIRCULAR
     $.fn.rotationDegrees = function () {
         var matrix = this.css("-webkit-transform") ||
@@ -50,13 +56,13 @@ $( document ).ready(function() {
             "height": heightOfLine * 4 * ($('.circular-menu li').length - index) + sizeOfFirst,
             "z-index": zIndex
         });
-        var currentRadius = parseFloat($(this).width()/2.5);
+        var currentRadius = parseFloat($(this).width()/2.8);
         var l = $(this).find('a').width();
         var angle = (parseFloat(l)*360)/(2*Math.PI*currentRadius);
         $(this).css({
             'transform': 'translate(-50%, -50%) rotate3d(0, 0, 1, '+angle/2+'deg)'
         });
-        $(this).find('a').arctext({radius: currentRadius });
+        $(this).find('a').arctext({radius: currentRadius});
         if(index != $('.circular-menu li').length -1) {
             generateSVG($(this), '#'+color1, startRadius, 90 + angle/2);
         }
@@ -168,10 +174,5 @@ $( document ).ready(function() {
     if($(window).width() < 993) {
         $('.service-height').removeClass('container');
     }
-    $(".mask").css({
-        "height": ($(".item-gallery").height() - $(".title-on-item").height()) + "px"
-    });
-    $(".item-gallery").css({
-        "height": $(".item-gallery").width() + "px"
-    });
+    
 });

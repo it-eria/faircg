@@ -321,7 +321,8 @@
 </section>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
-    $(".scrollTo").on('click', function (e) {
+    if($(window).width() < 992) {
+        $(".scrollTo").on('click', function (e) {
         e.preventDefault();
         var current = $(this).parent();
         $('html, body').animate({
@@ -331,6 +332,8 @@
     $(".nav-tabs li a").on("touchstart", function(){
         $(this).trigger( 'click' );
     });
+    }
+    
 </script>
 <script src="https://tympanus.net/Development/Arctext/js/jquery.arctext.js"></script>
 <script src="scripts.js"></script>
