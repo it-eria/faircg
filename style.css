@@ -1191,3 +1191,7 @@ body {
         width: 100%;
     }
   }
+
+  .matrix-grid {
+      border-top: 1px solid #adc4da;
+  }
