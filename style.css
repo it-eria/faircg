@@ -88,6 +88,23 @@
     font-style: normal;
   }
 
+  @font-face {
+    font-family: 'Adamina-Regular';
+    src: url('fonts/Adamina-Regular.woff') format('woff'),
+         url('fonts/Adamina-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Adaminaregular';
+    src: url('fonts/Adaminaregular.eot');
+    src: url('fonts/Adaminaregular.woff2') format('woff2'),
+         url('fonts/Adaminaregular.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 .choose-block {
     width: 100%;
     max-width: 125px;
@@ -125,10 +142,10 @@ a:hover {
 .choose-block img {
     border-radius: 50%;
     box-shadow: 3px 3px 20px #ccc;
-    max-width: 75px;
-    padding: 15px;
+    max-width: 100px;
+    padding: 17px;
     width: 100%;
-    height: 75px;
+    height: 100px;
 }
 
 .products-main-circle {
@@ -214,8 +231,8 @@ a:hover {
 }
 
 .container-proj {
-    width: 300px;
-    height: 300px;
+    width: 370px;
+    height: 370px;
     border: 5px solid #f0f0ef;
     border-radius: 50%;
     display: flex;
@@ -294,7 +311,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 45px;
+    padding-top: 80px;
 }
 
 .centered-title-proj {
@@ -303,17 +320,19 @@ a:hover {
     text-transform: uppercase;
     max-width: 100px;
     text-align: center;
+    position: absolute;
 }
 
 .field:hover span {
     transition: all .2s ease-in-out;
-    border: 2px solid #b4ceea;
-    color: #595859;
+    border: 2px solid #fff;
+    color: #000;
 }
 
 .field:hover {
     transition: all .2s ease-in-out;
     color: #595859;
+   background-color: #d3dde8;
 }
 
 .field:focus {
@@ -449,7 +468,8 @@ a:hover {
     align-items: center;
     border-bottom: 1px solid #adc4da;
     display: flex;
-    height: 100vh;
+    overflow: hidden;
+    height: auto;
     flex-direction: column;
     margin-bottom: 30px;    
     padding: 0 0 30px 0;
@@ -487,7 +507,7 @@ a:hover {
 
 .circular-menu li:hover .progress__value, .circular-menu .focus .progress__value {
     stroke-dashoffset: 0% !important;
-    stroke: #ADC4DB;
+    stroke: #aaaabb;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out ;
     -ms-transition: all .3s ease-in-out ;
@@ -512,7 +532,7 @@ a:hover {
     position: absolute;
     z-index: 500;
     width: auto;    
-    font-family: 'Montserrat-Regular';
+    font-family: 'Adamina-Regular';
     left: 50%;
     top: 8px;
     font-size: 25px;
@@ -529,7 +549,7 @@ a:hover {
     display: block;
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat-Bold';
+    font-family: 'Adamina-Regular';
     width: 100%;
     white-space: wrap;
     text-transform: uppercase;   
@@ -608,7 +628,7 @@ a:hover {
 @media screen and (min-width: 960px) and (min-height: 540px) {
     .circular-menu {
         margin-top: 0;
-        transform: scale(.6);
+        /* transform: scale(.6); */
     }
 
     .info-circular {
@@ -617,9 +637,7 @@ a:hover {
         right: 2%;
     }
 
-    .modal-menu-container h2 {
-        font-size: 20px;
-    }
+   
 
     .modal-menu-container p, .modal-menu-container ul li {
         font-size: 14px;
@@ -637,7 +655,7 @@ a:hover {
 @media screen and (min-width: 1080px) and (min-height: 1920px) {
     .circular-menu {
         margin-top: 0;
-        transform: scale(.9);
+        /* transform: scale(.9); */
     }
 
     .info-circular {
@@ -650,7 +668,7 @@ a:hover {
 @media screen and (min-width: 1200px) and (min-height: 1920px) {
     .circular-menu {
         margin-top: 0;
-        transform: scale(1.1);
+        /* transform: scale(1.1); */
     }
 
     .info-circular {
@@ -663,7 +681,7 @@ a:hover {
 @media screen and (min-width: 1280px) and (min-height: 720px) {
     .circular-menu {
         margin-top: 0;
-        transform: scale(.8);
+        /* transform: scale(.8); */
         margin-bottom: 0;
     }
 }
@@ -675,14 +693,10 @@ a:hover {
     }
     .choose-block,
     .choose-block img {
-        max-width: 100px;
-        width: 100%;
+      
     }
-    .choose-block h3 {
-        font-size: 10px;
-        margin-top: 5px;
-    }
-    .container-proj,
+   
+    /* .container-proj,
     .container-proj:before {
         width: 200px;        
         height: 200px;
@@ -690,25 +704,24 @@ a:hover {
     .container-proj.double-circle {
         width: 450px;        
         height: 450px;
-    }
-    .field {
+    } */
+    /* .field {
         width: 100px;
         height: 100px;
-    }
-    .field span {
+    } */
+    /* .field span {
         font-size: 12px;
-    }
-    .tab-content {
-        padding-top: 50px;
-    }
+    } */
 
-    .centered-title-proj {
+
+    /* .centered-title-proj {
         font-size: 14px;
-    }
+    } */
 }
 
 .circular-projects {
     display: flex;
+    padding-bottom: 45px;
 }
 
 .title-h2-default {
@@ -727,12 +740,11 @@ a:hover {
     font-size: 16px;
     font-family: 'Montserrat-Regular';    
     color: #000;
+    margin-bottom: 65px;
 }
 
 .service-height {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    display: block;
     width: 100%;
     position: relative;
 }
@@ -748,7 +760,7 @@ a:hover {
 }
 
 .centered-style {
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     position: relative;
@@ -770,7 +782,7 @@ a:hover {
 }
 
 .items-menu-circle {
-    transform: scale(0.8);
+    /* transform: scale(0.8); */
 }
 
 .margin-25 {
@@ -940,7 +952,7 @@ a:hover {
 
 
 .modal-menu-container p, .modal-menu-container ul li {
-    font-size: 14px;
+    font-size: 18px;
 }
 
 
@@ -1194,4 +1206,9 @@ body {
 
   .matrix-grid {
       border-top: 1px solid #adc4da;
+  }
+
+  .info-circular {     
+      position: relative !important;
+      margin-top: 50px;
   }
