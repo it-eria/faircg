@@ -553,7 +553,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afafaf', end
     white-space: nowrap;
     text-align: left;
     text-decoration: none;
-    color: #545354;
+    color: #000;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     padding-left: 0;
