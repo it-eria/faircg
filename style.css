@@ -326,19 +326,29 @@ a:hover {
 .field:hover span {
     transition: all .2s ease-in-out;
     border: 2px solid #fff;
-    color: #000;
+    color: #fff;
 }
 
 .field:hover {
     transition: all .2s ease-in-out;
     color: #595859;
-   background-color: #d3dde8;
+    background: #afafaf;
+    display: block;
+background: -moz-linear-gradient(left, hsla(0,0%,69%,1) 0%, hsla(0,0%,78%,1) 100%);
+background: -webkit-linear-gradient(left, hsla(0,0%,69%,1) 0%,hsla(0,0%,78%,1) 100%);
+background: linear-gradient(to right, hsla(0,0%,69%,1) 0%,hsla(0,0%,78%,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afafaf', endColorstr='#c7c7c7',GradientType=1 );
 }
 
 .field:focus {
     transition: all .2s ease-in-out;
     color: #fff;
-    background-color: #b4ceea;
+    background: #afafaf;
+    display: block;
+background: -moz-linear-gradient(left, hsla(0,0%,69%,1) 0%, hsla(0,0%,78%,1) 100%);
+background: -webkit-linear-gradient(left, hsla(0,0%,69%,1) 0%,hsla(0,0%,78%,1) 100%);
+background: linear-gradient(to right, hsla(0,0%,69%,1) 0%,hsla(0,0%,78%,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afafaf', endColorstr='#c7c7c7',GradientType=1 );
 }
 
 .field:focus span{
@@ -349,7 +359,7 @@ a:hover {
 
 .field span {
     border-radius: 50%;
-    border: 2px solid #b4ceea;
+    border: 2px solid #afafaf;
     width: 100%;
     display: flex;
     height: 100%;
@@ -438,7 +448,11 @@ a:hover {
 
 
 .choose-block:hover .hover-img {
-    background-color: #d3dde8;
+    background: #c7c7c7;
+background: -moz-linear-gradient(left, hsla(0,0%,78%,1) 0%, hsla(0,0%,69%,1) 100%);
+background: -webkit-linear-gradient(left, hsla(0,0%,78%,1) 0%,hsla(0,0%,69%,1) 100%);
+background: linear-gradient(to right, hsla(0,0%,78%,1) 0%,hsla(0,0%,69%,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7c7c7', endColorstr='#afafaf',GradientType=1 );
 }
 
 .choose-block.active:hover > .hover-img {
@@ -446,12 +460,12 @@ a:hover {
 }
 
 .choose-block.active > .hover-img {
-    background: #72a6db;
+    background: #afafaf;
     display: block;
-    background: -moz-linear-gradient(left, hsla(210,59%,65%,1) 0%, hsla(209,56%,75%,1) 100%);
-    background: -webkit-linear-gradient(left, hsla(210,59%,65%,1) 0%,hsla(209,56%,75%,1) 100%);
-    background: linear-gradient(to right, hsla(210,59%,65%,1) 0%,hsla(209,56%,75%,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#72a6db', endColorstr='#9dc1e3',GradientType=1 );
+background: -moz-linear-gradient(left, hsla(0,0%,69%,1) 0%, hsla(0,0%,78%,1) 100%);
+background: -webkit-linear-gradient(left, hsla(0,0%,69%,1) 0%,hsla(0,0%,78%,1) 100%);
+background: linear-gradient(to right, hsla(0,0%,69%,1) 0%,hsla(0,0%,78%,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afafaf', endColorstr='#c7c7c7',GradientType=1 );
 }
 
 /*----------------------------------------- menu circular ---------------------------------------------------*/
@@ -466,7 +480,7 @@ a:hover {
 
 .circular-menu-container {
     align-items: center;
-    border-bottom: 1px solid #adc4da;
+    border-bottom: 1px solid #afafaf;
     display: flex;
     overflow: hidden;
     height: auto;
@@ -507,7 +521,7 @@ a:hover {
 
 .circular-menu li:hover .progress__value, .circular-menu .focus .progress__value {
     stroke-dashoffset: 0% !important;
-    stroke: #aaaabb;
+    stroke: #afafaf;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out ;
     -ms-transition: all .3s ease-in-out ;
@@ -566,7 +580,7 @@ a:hover {
 }
 
 .toggle-content {
-    border-left: 2px solid #74A7DB;
+    border-left: 2px solid #afafaf;
     padding-left: 15px;
 }
 
@@ -574,7 +588,7 @@ a:hover {
     font-size: 28px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #74A7DB;
+    color: #afafaf;
     font-family: 'Montserrat-Bold';
 }
 
@@ -1205,7 +1219,7 @@ body {
   }
 
   .matrix-grid {
-      border-top: 1px solid #adc4da;
+      border-top: 1px solid #afafaf;
   }
 
   .info-circular {     
