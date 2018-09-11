@@ -556,7 +556,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afafaf', end
     color: #000;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    padding-left: 0;
+    padding-left: 10px;
 }
 .circular-menu li h3 {
     color: #545354;

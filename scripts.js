@@ -57,15 +57,15 @@ $(document).ready(function () {
             "height": heightOfLine * 4 * ($('.circular-menu li').length - index) + sizeOfFirst,
             "z-index": zIndex
         });
-        var currentRadius = parseFloat($(this).width() / 2.8);
+        var currentRadius = parseFloat($(this).width() / 2.2);
         var l = $(this).find('a').width();
         var angle = (parseFloat(l) * 360) / (2 * Math.PI * currentRadius);
         $(this).css({
-            'transform': 'translate(-50%, -50%) rotate3d(0, 0, 1, ' + angle / 2 + 'deg)'
+            'transform': 'translate(-50%, -50%) rotate3d(0, 0, 1, ' + angle / 1.9 + 'deg)'
         });
         $(this).find('a').arctext({ radius: currentRadius });
         if (index != $('.circular-menu li').length - 1) {
-            generateSVG($(this), '#' + color1, startRadius, 90 + angle / 2);
+            generateSVG($(this), '#' + color1, startRadius, 90 + angle / 1.9);
         }
         color1 = (parseInt(color1, 16) - colorDiff).toString(16);
         ++zIndex;
