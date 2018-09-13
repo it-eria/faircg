@@ -1,0 +1,79 @@
+#temptemptemp {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, -100%);
+}
+
+.circleMenu {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.circleMenu--init {
+  position: relative;
+}
+
+.circleMenu--init li {
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 500;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all .3s ease-in-out;
+}
+
+.circleMenu--init li a {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  transform-origin: 50% 50%;
+  transform: rotate(-90deg);
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all .3s ease-in-out;
+  color: #000;
+  text-decoration: none;
+}
+
+.circleMenu--init li a span {
+  display: flex;
+  justify-content: flex-start;
+} 
+
+.circleMenu--init li svg {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 50% 50%;
+  transform: rotate(-90deg);
+  z-index: 100;
+}
+
+.circleMenu--init li:hover > svg .progress__value {
+  stroke-dashoffset: 0% !important;
+}
+
+.circleMenu--init li svg .progress__value {
+  transition: all 1s ease-in-out;
+}
+
+.circleMenu--init li a span {
+  position: absolute;
+  left: 0;
+  text-align: center;
+  transform-origin: 50% 50%;
+}

@@ -107,8 +107,7 @@
 
 .choose-block {
     width: 100%;
-    max-width: 125px;
-    max-height: 125px;
+    max-width: 125px;    
     padding: 0 10px;
     display: flex;
     text-align: center;
@@ -126,7 +125,7 @@ a:hover {
 
 .choose-block h3 {
     font-size: 16px;
-    font-family: 'Montserrat-Medium';
+   font-family: 'Adamina-Regular';
     text-align: center;
     color: #000;
     text-decoration: none;
@@ -285,6 +284,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     height: 160px;
+	font-family: 'Adamina-Regular';
     border-radius: 50%;
     position: absolute;
     background: #fff;
@@ -512,6 +512,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afafaf', end
 
 .circular-menu li:last-child {
     background-color: #fff !important;
+   
 }
 
 .circular-menu li:hover {
@@ -542,21 +543,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afafaf', end
     transition: all 1s ease-in-out;
 }
 .circular-menu li a {
-    display: block;
-    position: absolute;
-    z-index: 500;
-    width: auto;    
+
+    /* display: block; */
+    /* position: absolute; */
+    /* z-index: 500; */
+    /* width: auto;     */
     font-family: 'Adamina-Regular';
-    left: 50%;
-    top: 8px;
+    /* left: 50%; */
+	    /* top: 8px; */
     font-size: 25px;
     white-space: nowrap;
-    text-align: left;
+    /* text-align: left; */
     text-decoration: none;
     color: #000;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    padding-left: 10px;
+    /* -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    /*padding-left: 10px;*/
 }
 .circular-menu li h3 {
     color: #545354;
@@ -804,7 +806,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afafaf', end
 }
 @media screen and (max-width: 1200px) {
     .info-circular {
-        max-width: 170px;
+        max-width: none;
     }
 
     .modal-menu-container h2 {
@@ -821,6 +823,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afafaf', end
 }
 
 @media screen and (max-width: 992px){
+
+    .circular-menu li:last-child {
+       
+        padding-bottom: 130px;
+    }
 
     .circular-projects{
         height: auto!important;
@@ -919,7 +926,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afafaf', end
     }
 
     .circular-menu-wrapper {
-        display: flex;
+        /* display: flex; */
         justify-content: center;
         padding-top: 10px;
         overflow: hidden;
@@ -1225,4 +1232,9 @@ body {
   .info-circular {     
       position: relative !important;
       margin-top: 50px;
+  }
+
+  .circular-menu li:last-child {
+      font-size: 28px;
+      font-family: 'Adamina-Regular';
   }
