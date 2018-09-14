@@ -315,10 +315,10 @@ a:hover {
 }
 
 .centered-title-proj {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 100%;
-    text-transform: uppercase;
-    max-width: 100px;
+    text-transform: uppercase;   
+	max-width: 140px;
     text-align: center;
     position: absolute;
 }
@@ -1250,3 +1250,8 @@ body {
       font-size: 28px;
       font-family: 'Adamina-Regular';
   }
+  
+  .wpb_wrapper p {
+    font-size: 15px;
+    line-height: 35px;
+}
